@@ -5,7 +5,7 @@
 
 
 /* CSS RESET */
-body, header, nav, main, footer, img, h1, h3, ul {
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption {
       margin: 0;
       padding: 0;
       border: 0;
@@ -173,6 +173,26 @@ nav li a{
 
       .round{
         border-radius: 6px;
+
+      }
+
+      aside{
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-shadow: 4px 4px 10px #c5a687;
+      }
+
+      figure{
+        border: 4px solid #2a1f14;
+        box-shadow: 6px 6px 10px #c5a687;
+        max-width: 400px;
+        margin: 2% auto;
+      }
+
+      figcaption{
+        padding: 2%;
+        border-top: 4px solid #2a1f14;
       }
 
       #info ul {
@@ -258,6 +278,18 @@ footer {
 
     }
 
+    .grid{
+      display: grid;
+      grid-template-columns: 2;
+      grid-gap: 10px;
+
+    }
+
+    aside{
+      grid-column: 1 / span 2;
+
+    }
+
 
   }
 
@@ -285,7 +317,7 @@ main{
 
       }
 
-      
+
 
       /* Desktop Viewport: Style rules for nav area */
 
@@ -328,6 +360,25 @@ main{
     /* Media Query for Print */
 
       @media screen and (min-width: 769px), print{
+
+        nav li a:hover{
+          opacity: 0.5;
+
+        }
+
+        .grid{
+          grid-template-columns: 3;
+          grid-gap: 30px;
+
+        }
+
+        aside{
+          grid-column: 1 / span 3;
+          font-size: 2em;
+
+        }
+
+        
 
         body{
           color: #fff, #000;
